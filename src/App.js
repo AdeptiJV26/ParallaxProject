@@ -1,13 +1,17 @@
 import "./App.css";
-import ParallaxScene from "./parallax/firstParallax";
+import ParallaxTop from "./parallax/parallaxTop";
 import TextBlock from "./textblock";
+import TopBar from "./templates/navigationBar";
+
+
 
 
 
 export default function App() {
   return (
     <div className="appBG">
-      <ParallaxScene />
+      <TopBar />
+      <ParallaxTop />
       <TextBlock />
     </div>
   );

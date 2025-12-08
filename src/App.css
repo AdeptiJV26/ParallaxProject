@@ -1,3 +1,87 @@
+/* Main */
+.appBG {
+  background-color: #000;
+  height: 100vh;
+  width: 100%;
+}
+
+.animation,
+.animation_layer {
+  height: 1000px;
+}
+
+.animation {
+  display: block;
+  position: relative;
+  z-index: 10;
+}
+
+.animation_layer {
+  background-position: bottom center;
+  background-size: auto 1038px;
+  background-repeat: no-repeat;
+  width: 100%;
+  position: absolute;
+}
+
+.animation_layer.parallax {
+  position: fixed;
+}
+
+
+
+/* Asset Images */
+#PurpleBG {
+  background-image: url(./images/PurpleBG.png);
+  background-size: cover;
+
+}
+
+#Moon {
+  background-image: url(./images/Moon.png);
+  background-size: contain;
+  height: 200px;
+  width: 200px;
+  margin-top: 150px;
+  margin-left: 100px;
+}
+
+#Cloud {
+  background-image: url(./images/StarPanels.png);
+  background-size: contain;
+  height: 940px;
+}
+
+#City1 {
+  background-image: url(./images/CityBG1.png);
+  background-size: cover;
+}
+
+#City2 {
+  background-image: url(./images/CityBG2.png);
+  background-size: cover;
+}
+
+#City3 {
+  background-image: url(./images/CityBG3.png);
+  background-size: cover;
+}
+
+#FillerClouds {
+  background-image: url(./images/FillerClouds.png);
+  background-size: cover;
+}
+
+#Character {
+  background-image: url(./images/RaidenCliff.png);
+  background-size: contain;
+}
+#Cliff {
+  background-image: url(./images/RightCliff.png);
+  background-size: contain;
+}
+
+/* Text Box Panel */
 #textblock {
   background-color: #000000;
   height: 100vh;
@@ -7,6 +91,7 @@
   width: 50%;
   margin: 0 auto;
   padding-top: 70px;
+  overflow: hidden;
 }
 
 #textblock-title {
@@ -39,57 +124,4 @@
   color: #ffffff;
   font-size: 15px;
   font-weight: 600;
-}
-
-.appBG {
-  background-color: #000;
-  height: 100vh;
-  width: 100%;
-}
-
-
-.animation,
-.animation_layer {
-  height: 1000px;
-
-}
-
-.animation {
-  display: block;
-  position: relative;
-  z-index: 10;
-}
-
-.animation_layer {
-  background-position: bottom center;
-  background-size: auto 1038px;
-  background-repeat: no-repeat;
-  width: 100%;
-  position: absolute;
-}
-.animation_layer.parallax {
-  position: fixed;
-}
-
-#BG {
-  background-image: url(./images/InazumaBG.png);
-  background-size: cover;
-
-}
-
-#Clouds {
-  background-image: url(./images/Clouds.png);
-  background-size: cover  ;
-}
-
-#Moon {
-  background-image: url(./images/Moon.png);
-}
-
-#Character {
-  background-image: url(./images/RaidenCliff.png);
-  background-size: contain;
-}
-#Cliff {
-  background-image: url(./images/RightCliff.png);
 }
