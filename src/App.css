@@ -1,8 +1,26 @@
+/* Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Google Font */
+@import url("https://fonts.googleapis.com/css2?family=New+Rocker&family=Shadows+Into+Light&display=swap");
+
+
+
+/* Fonts */
+.shadows-into-light-regular {
+  font-family: "Shadows Into Light", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
 /* Main */
 .appBG {
   background-color: #000;
   height: 100vh;
   width: 100%;
+  overflow-y: hidden;
 }
 
 .animation,
@@ -28,13 +46,30 @@
   position: fixed;
 }
 
+.TopParallaxPanel {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  height: 100vh;
+  width: 100%;
+}
 
-
-/* Asset Images */
+/* Parallax Content */
 #PurpleBG {
   background-image: url(./images/PurpleBG.png);
   background-size: cover;
+}
 
+#TitleTextShadow {
+  text-shadow: 0 0 7px #6A0DAD,
+               0 0 10px #8A2BE2,
+               0 0 21px #7B68EE,
+               0 0 42px #9B59B6,
+               0 0 82px #A020F0,
+               0 0 92px #9932CC,
+               0 0 102px #800080;
+  color: #a608a6;
+  animation: colorshift 20s infinite alternate;
 }
 
 #Moon {
@@ -48,8 +83,8 @@
 
 #Cloud {
   background-image: url(./images/StarPanels.png);
-  background-size: contain;
-  height: 940px;
+  background-size: cover;
+
 }
 
 #City1 {
@@ -74,11 +109,11 @@
 
 #Character {
   background-image: url(./images/RaidenCliff.png);
-  background-size: contain;
+  background-size: cover;
 }
 #Cliff {
   background-image: url(./images/RightCliff.png);
-  background-size: contain;
+  background-size: cover;
 }
 
 /* Text Box Panel */
@@ -124,4 +159,25 @@
   color: #ffffff;
   font-size: 15px;
   font-weight: 600;
+}
+
+@keyframes colorshift {
+  0% {
+    color: #000000;
+  }
+  20% {
+    color: #0A0A0A;
+  }
+  40% {
+    color: #050505;
+  }
+  60% {
+    color: #0D0D0D;
+  }
+  80% {
+    color: #101010;
+  }
+  100% {
+    color: #111111;
+  }
 }
