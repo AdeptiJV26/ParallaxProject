@@ -1,0 +1,11 @@
+.TopBarNav {
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+
+#AllRightsReserved {
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: red;
+}

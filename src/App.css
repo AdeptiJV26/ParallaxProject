@@ -6,8 +6,6 @@
 /* Google Font */
 @import url("https://fonts.googleapis.com/css2?family=New+Rocker&family=Shadows+Into+Light&display=swap");
 
-
-
 /* Fonts */
 .shadows-into-light-regular {
   font-family: "Shadows Into Light", cursive;
@@ -54,20 +52,15 @@
   width: 100%;
 }
 
-/* Parallax Content */
+/* Parallax Page 1 Content */
 #PurpleBG {
   background-image: url(./images/PurpleBG.png);
-  background-size: cover;
+  background-size: contain;
 }
 
 #TitleTextShadow {
-  text-shadow: 0 0 7px #6A0DAD,
-               0 0 10px #8A2BE2,
-               0 0 21px #7B68EE,
-               0 0 42px #9B59B6,
-               0 0 82px #A020F0,
-               0 0 92px #9932CC,
-               0 0 102px #800080;
+  text-shadow: 0 0 7px #6a0dad, 0 0 10px #8a2be2, 0 0 21px #7b68ee,
+    0 0 42px #9b59b6, 0 0 82px #a020f0, 0 0 92px #9932cc, 0 0 102px #800080;
   color: #a608a6;
   animation: colorshift 20s infinite alternate;
 }
@@ -83,8 +76,7 @@
 
 #Cloud {
   background-image: url(./images/StarPanels.png);
-  background-size: cover;
-
+  background-size: contain;
 }
 
 #City1 {
@@ -109,12 +101,43 @@
 
 #Character {
   background-image: url(./images/RaidenCliff.png);
-  background-size: cover;
+  background-size: contain;
 }
+
 #Cliff {
   background-image: url(./images/RightCliff.png);
-  background-size: cover;
+  background-size: contain;
 }
+
+#Raiden {
+  background-image: url(./images/RaidenShogun.png);
+  position: fixed;
+  background-size: cover;
+  padding: 0;
+  right: 0;
+}
+
+/* Parallax Page 2 Content */
+
+.DreamSakura {
+  background-image: url(./images/DreamSakura01.png);
+  background-size: contain;
+  background-color: red;
+}
+
+.neon-glow {
+   color: #f3e8ff;
+  text-shadow: 0 0 7px #a855f7, 0 0 10px #c084fc, 0 0 21px #a78bfa;
+}
+
+.neon-glow-purple-hover {
+  /* Default state (no glow) */
+  color: #fff;
+  text-shadow: none;
+  transition: all 0.3s ease-in-out; /* Smooth transition for the glow */
+}
+
+
 
 /* Text Box Panel */
 #textblock {
@@ -154,7 +177,7 @@
   margin-bottom: 20px;
 }
 
-#textblock-devsense {
+#textblock-text {
   text-decoration: none;
   color: #ffffff;
   font-size: 15px;
@@ -166,13 +189,13 @@
     color: #000000;
   }
   20% {
-    color: #0A0A0A;
+    color: #0a0a0a;
   }
   40% {
     color: #050505;
   }
   60% {
-    color: #0D0D0D;
+    color: #0d0d0d;
   }
   80% {
     color: #101010;
