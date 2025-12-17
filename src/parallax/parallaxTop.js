@@ -44,7 +44,7 @@ export default function ParallaxTop() {
         <div className="animation_layer parallax" id="Layer2"></div>
       </ParallaxLayer>
 
-      <ParallaxLayer offset={0} speed={0.8} zIndex={8}>
+      <ParallaxLayer offset={0} speed={0.2} zIndex={8}>
         <div className="animation_layer parallax" id="Layer3"></div>
       </ParallaxLayer>
 
