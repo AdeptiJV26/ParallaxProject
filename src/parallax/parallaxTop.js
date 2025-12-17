@@ -3,15 +3,15 @@ import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 export default function ParallaxTop() {
   return (
     <Parallax pages={7} style={{ top: "0", left: "0" }} class="animation">
-      <ParallaxLayer offset={0} speed={0.4} zIndex={4} id="PurpleBG">
-        <div className="animation_layer parallax"></div>
+      <ParallaxLayer offset={0} speed={0.4} zIndex={4}>
+        <div className="animation_layer parallax" id="PurpleBG"></div>
       </ParallaxLayer>
 
-      <ParallaxLayer offset={0} speed={2} zIndex={5}>
+      <ParallaxLayer offset={0} speed={1} zIndex={5}>
         <div className="animation_layer parallax" id="Moon"></div>
       </ParallaxLayer>
 
-      <ParallaxLayer offset={0} speed={1.5} zIndex={6}>
+      <ParallaxLayer offset={0} speed={1} zIndex={6}>
         <div className="animation_layer parallax" id="Cloud"></div>
       </ParallaxLayer>
 
@@ -24,28 +24,28 @@ export default function ParallaxTop() {
         <div className="animation_layer parallax flex">
           <div className="TopParallaxPanel pt-10">
             <p
-              className="shadows-into-light-regular text-xl sm:text-3xl md:text-5xl lg:text-7xl xl:text-9xl font-extrabold pt-10"
+              className="shadows-into-light-regular text-5xl lg:text-7xl xl:text-9xl font-extrabold pt-10"
               id="TitleTextShadow"
             >
-              Inazuma
+              MADARA
               <br />
-              Town
+              GAMING
             </p>
             <br />
           </div>
         </div>
       </ParallaxLayer>
 
-      <ParallaxLayer offset={0} speed={0.5} zIndex={6}>
-        <div className="animation_layer parallax" id="City1"></div>
+      <ParallaxLayer offset={0} speed={0.4} zIndex={6}>
+        <div className="animation_layer parallax" id="Layer1"></div>
       </ParallaxLayer>
 
-      <ParallaxLayer offset={0} speed={0.65} zIndex={7}>
-        <div className="animation_layer parallax" id="City2"></div>
+      <ParallaxLayer offset={0} speed={0.6} zIndex={7}>
+        <div className="animation_layer parallax" id="Layer2"></div>
       </ParallaxLayer>
 
-      <ParallaxLayer offset={0} speed={0.4} zIndex={8}>
-        <div className="animation_layer parallax" id="City3"></div>
+      <ParallaxLayer offset={0} speed={0.8} zIndex={8}>
+        <div className="animation_layer parallax" id="Layer3"></div>
       </ParallaxLayer>
 
       <ParallaxLayer offset={0} speed={0.4} zIndex={9}>
@@ -56,19 +56,13 @@ export default function ParallaxTop() {
         <div className="animation_layer parallax" id="Character"></div>
       </ParallaxLayer>
 
-      <ParallaxLayer offset={0} speed={0.4} zIndex={9}>
-        <div className="animation_layer parallax" id="Cliff"></div>
-      </ParallaxLayer>
-
-      <ParallaxLayer
-        offset={1}
-        speed={0.5}
-        zIndex={10}
-      >
+      <ParallaxLayer offset={1} speed={0.5} zIndex={10}>
         ow{" "}
         <div className="flex w-full h-full px-8 text-white items-cente pt-60">
           <div className="flex flex-col w-1/2 py-4">
-            <h2 style={{ color: "red" }}>Raiden</h2>
+            <h2 className="text-sm" style={{ color: "red" }}>
+              Raiden
+            </h2>
             <p className="flex w-full h-full justify-center items-center">
               Raiden Shogun, also known as Ei, is the Electro Archon and the
               ruler of Inazuma. After the death of her twin sister Makoto, the
@@ -118,7 +112,7 @@ export default function ParallaxTop() {
               </p>
             </div>
             <footer id="textblock-footer">
-              <a id="textblock-text">Hallo </a>{" "}
+              <a id="textblock-text">Hallo </a>
             </footer>
           </div>
         </div>
@@ -127,8 +121,6 @@ export default function ParallaxTop() {
       <ParallaxLayer offset={1} speed={0.4} zIndex={21}>
         <div className="animation_layer parallax" id=""></div>
       </ParallaxLayer>
-
-
     </Parallax>
   );
 }

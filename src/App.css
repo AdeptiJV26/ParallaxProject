@@ -55,7 +55,8 @@
 /* Parallax Page 1 Content */
 #PurpleBG {
   background-image: url(./images/PurpleBG.png);
-  background-size: contain;
+  background-size: cover;
+  background-position: center center;
 }
 
 #TitleTextShadow {
@@ -65,38 +66,31 @@
   animation: colorshift 20s infinite alternate;
 }
 
-#Moon {
-  background-image: url(./images/Moon.png);
-  background-size: contain;
-  height: 200px;
-  width: 200px;
-  margin-top: 150px;
-  margin-left: 100px;
-}
+
 
 #Cloud {
   background-image: url(./images/StarPanels.png);
+  background-size: cover;
+}
+
+#Layer1 {
+  background-image: url(./images/Layer1.png);
+  background-size: cover;
+}
+
+#Layer2 {
+  background-image: url(./images/Layer2.png);
+  background-size: cover;
+}
+
+#Layer3 {
+  background-image: url(./images/Layer3.png);
   background-size: contain;
-}
-
-#City1 {
-  background-image: url(./images/CityBG1.png);
-  background-size: cover;
-}
-
-#City2 {
-  background-image: url(./images/CityBG2.png);
-  background-size: cover;
-}
-
-#City3 {
-  background-image: url(./images/CityBG3.png);
-  background-size: cover;
 }
 
 #FillerClouds {
   background-image: url(./images/FillerClouds.png);
-  background-size: cover;
+  background-size: contain;
 }
 
 #Character {
@@ -104,10 +98,6 @@
   background-size: contain;
 }
 
-#Cliff {
-  background-image: url(./images/RightCliff.png);
-  background-size: contain;
-}
 
 #Raiden {
   background-image: url(./images/RaidenShogun.png);
@@ -121,7 +111,7 @@
 
 .DreamSakura {
   background-image: url(./images/DreamSakura01.png);
-  background-size: contain;
+  background-size: cover;
   background-color: red;
 }
 
@@ -145,7 +135,7 @@
   height: 100vh;
 }
 
-#textblock-container {
+#textblock-coverer {
   width: 50%;
   margin: 0 auto;
   padding-top: 70px;
