@@ -46,8 +46,9 @@
 
 .TopParallaxPanel {
   display: flex;
-  justify-content: center;
-  align-items: start;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
   height: 100vh;
   width: 100%;
 }
@@ -56,7 +57,6 @@
 #PurpleBG {
   background-image: url(./images/PurpleBG.png);
   background-size: cover;
-  background-position: center center;
 }
 
 #TitleTextShadow {
@@ -90,7 +90,7 @@
 
 #FillerClouds {
   background-image: url(./images/FillerClouds.png);
-  background-size: contain;
+  background-size: cover;
 }
 
 #Character {
@@ -101,17 +101,15 @@
 
 #Raiden {
   background-image: url(./images/RaidenShogun.png);
-  position: fixed;
   background-size: cover;
-  padding: 0;
-  right: 0;
+
 }
 
 /* Parallax Page 2 Content */
 
 .DreamSakura {
   background-image: url(./images/DreamSakura01.png);
-  background-size: cover;
+  background-size: contain;
   background-color: red;
 }
 
@@ -135,7 +133,7 @@
   height: 100vh;
 }
 
-#textblock-coverer {
+#textblock-container {
   width: 50%;
   margin: 0 auto;
   padding-top: 70px;

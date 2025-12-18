@@ -18,8 +18,8 @@ export default function ParallaxTop() {
       <ParallaxLayer
         offset={0}
         speed={0.6}
-        zIndex={6}
-        className="w-screen text-center"
+        zIndex={9}
+        className="w-screen text-center pointer-events-none"
       >
         <div className="animation_layer parallax flex">
           <div className="TopParallaxPanel pt-10">
@@ -31,6 +31,21 @@ export default function ParallaxTop() {
               <br />
               GAMING
             </p>
+            <div>
+              <p>Support me on Patreon here</p>
+              <a
+                href="https://google.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-500 underline cursor-pointer flex justify-center pt-2"
+              >
+             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+</svg>
+
+
+              </a>
+            </div>
             <br />
           </div>
         </div>
@@ -40,11 +55,11 @@ export default function ParallaxTop() {
         <div className="animation_layer parallax" id="Layer1"></div>
       </ParallaxLayer>
 
-      <ParallaxLayer offset={0} speed={0.6} zIndex={7}>
+      <ParallaxLayer offset={0} speed={0.4} zIndex={7}>
         <div className="animation_layer parallax" id="Layer2"></div>
       </ParallaxLayer>
 
-      <ParallaxLayer offset={0} speed={0.2} zIndex={8}>
+      <ParallaxLayer offset={0} speed={0.5} zIndex={8}>
         <div className="animation_layer parallax" id="Layer3"></div>
       </ParallaxLayer>
 
