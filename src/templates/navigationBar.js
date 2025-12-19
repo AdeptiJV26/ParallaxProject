@@ -1,7 +1,7 @@
 export default function TopBar() {
   return (
     <div className="w-full bg-gray shadow-lg TopBarNav">
-      <nav className="fixed top-0 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <nav className="fixed top-0 max-w-full mx-auto px-20px sm:px-10 lg:px-20 pt-5 w-full">
         <div className="flex items-center justify-between h-16 group">
           {/* Logo/Brand Name */}
           <div className="text-xl font-bold text-white tracking-wider">
@@ -9,11 +9,11 @@ export default function TopBar() {
           </div>
 
           {/* Navigation Links */}
-          <ul className="flex space-x-8">
+          <ul className="flex space-x-8 gap-8">
             <li className="group">
               <a
                 href="#home"
-                className="text-white hover:bg-indigo-700 rounded-2xl hover:text-white px-3 py-2 text-sm font-medium transition duration-150 neon-glow-purple-hover neon-glow"
+                className="neon-button rounded-2xl px-3 py-2 text-md text-xl transition duration-150"
               >
                 Home
               </a>
@@ -21,7 +21,7 @@ export default function TopBar() {
             <li className="group">
               <a
                 href="#about"
-                className="text-white hover:bg-indigo-700 rounded-2xl hover:text-white px-3 py-2 text-sm font-medium transition duration-150 neon-glow-purple-hover neon-glow"
+                className="neon-button rounded-2xl px-3 py-2 text-md text-xl transition duration-150"
               >
                 About
               </a>
@@ -29,7 +29,7 @@ export default function TopBar() {
             <li className="group">
               <a
                 href="#services"
-                className="text-white hover:bg-indigo-700 rounded-2xl hover:text-white px-3 py-2 text-sm font-medium transition duration-150 neon-glow-purple-hover neon-glow"
+                className="neon-button rounded-2xl px-3 py-2 text-md text-xl transition duration-150"
               >
                 Settings?
               </a>
@@ -37,7 +37,7 @@ export default function TopBar() {
             <li className="group">
               <a
                 href="#contact"
-                className="text-white hover:bg-indigo-600 px-3 py-2 rounded-2xl hover:text-white text-sm font-medium transition duration-150 neon-glow-purple-hover neon-glow"
+                className="neon-button px-3 py-2 rounded-2xl text-md text-xl transition duration-150"
               >
                 Contact
               </a>

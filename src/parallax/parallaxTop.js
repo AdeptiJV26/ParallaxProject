@@ -18,7 +18,7 @@ export default function ParallaxTop() {
       <ParallaxLayer
         offset={0}
         speed={0.6}
-        zIndex={9}
+        style={{ zIndex: "999" }}
         className="w-screen text-center pointer-events-none"
       >
         <div className="animation_layer parallax flex">
@@ -34,16 +34,25 @@ export default function ParallaxTop() {
             <div>
               <p>Support me on Patreon here</p>
               <a
-                href="https://google.com"
+                href="https://www.youtube.com/watch?v=xvFZjo5PgG0&list=RDxvFZjo5PgG0&start_radio=1"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-500 underline cursor-pointer flex justify-center pt-2"
+                className="text-blue-500 underline cursor-pointer flex justify-center pt-2 pointer-events-auto"
               >
-             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
-  <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
-</svg>
-
-
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="size-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"
+                  />
+                </svg>
               </a>
             </div>
             <br />
@@ -70,33 +79,17 @@ export default function ParallaxTop() {
       <ParallaxLayer offset={0} speed={0.5} zIndex={9}>
         <div className="animation_layer parallax" id="Character"></div>
       </ParallaxLayer>
+      <div class="spacer"></div>
 
-      <ParallaxLayer offset={1} speed={0.5} zIndex={10}>
-        ow{" "}
-        <div className="flex w-full h-full px-8 text-white items-cente pt-60">
-          <div className="flex flex-col w-1/2 py-4">
-            <h2 className="text-sm" style={{ color: "red" }}>
-              Raiden
-            </h2>
-            <p className="flex w-full h-full justify-center items-center">
-              Raiden Shogun, also known as Ei, is the Electro Archon and the
-              ruler of Inazuma. After the death of her twin sister Makoto, the
-              former Electro Archon, Ei withdrew from direct governance and
-              created the Raiden Shogun puppet to rule in her place. In pursuit
-              of her ideal of eternity, she sought to protect Inazuma from loss
-              and erosion by enforcing an unchanging order. This belief led to
-              the Vision Hunt Decree, a policy that caused great suffering among
-              her people. Through her encounters with the Traveler, Ei confronts
-              the consequences of her isolation and begins to reevaluate her
-              understanding of eternity, choosing growth and change over
-              stagnation.
-            </p>
-          </div>
-          <div className="flex w-1/2 h-full items-center justify-between">
-            <div className="w-1/2 h-full" id="Raiden"></div>
-            <div className="w-1/2 h-full" id="DreamSakura01"></div>
-          </div>
-        </div>
+
+
+
+      <ParallaxLayer offset={1} speed={0.4} zIndex={2}>
+        <div className="animation_layer parallax" id="Raiden"></div>
+      </ParallaxLayer>
+
+      <ParallaxLayer offset={1} speed={0.4} zIndex={99}>
+        <div className="animation_layer parallax" id="DreamSakura" style={{ backgroundColor: 'red' }}></div>
       </ParallaxLayer>
 
       <ParallaxLayer offset={1} speed={0.5} zIndex={10}>
@@ -127,7 +120,7 @@ export default function ParallaxTop() {
               </p>
             </div>
             <footer id="textblock-footer">
-              <a id="textblock-text">Hallo </a>
+              <a id="textblock-text"> </a>
             </footer>
           </div>
         </div>
