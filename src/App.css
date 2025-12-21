@@ -40,10 +40,6 @@
   position: absolute;
 }
 
-.animation_layer.parallax {
-  position: fixed;
-}
-
 .TopParallaxPanel {
   display: flex;
   flex-direction: column;
@@ -53,85 +49,15 @@
   width: 100%;
 }
 
-/* Parallax Page 1 Content */
-#PurpleBG {
-  background-image: url(./images/PurpleBG.png);
-  background-size: cover;
-}
 
-#TitleTextShadow {
-  text-shadow: 0 0 7px #6a0dad, 0 0 10px #8a2be2, 0 0 21px #7b68ee,
-    0 0 42px #9b59b6, 0 0 82px #a020f0, 0 0 92px #9932cc, 0 0 102px #800080;
-  color: #a608a6;
-  animation: colorshift 20s infinite alternate;
-}
-
-#Cloud {
-  background-image: url(./images/StarPanels.png);
-  background-size: cover;
-}
-
-#Layer1 {
-  background-image: url(./images/Layer1.png);
-  background-size: cover;
-}
-
-#Layer2 {
-  background-image: url(./images/Layer2.png);
-  background-size: cover;
-}
-
-#Layer3 {
-  background-image: url(./images/Layer3.png);
-  background-size: cover;
-}
-
-#FillerClouds {
-  background-image: url(./images/FillerClouds.png);
-  background-size: cover;
-}
-
-#Character {
-  background-image: url(./images/RaidenCliff.png);
-  background-size: cover;
-}
-
-#Raiden {
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 1) 0%,
-      rgba(0, 0, 0, 0) 20%,
-      rgba(0, 0, 0, 0) 80%,
-      rgba(0, 0, 0, 1) 100%
-    ),
-    url("./images/RaidenShogun.png");
-}
-
-/* Spacer */
-.spacer {
-  height: 300px;
-}
-
-/* Parallax Page 2 Content */
-.DreamSakura {
-  background-image: url(./images/DreamSakura01.png);
-  background-size: cover;
-}
 
 /* Text Box Panel */
 #textblock {
-  background-color: #000000;
   height: 100vh;
 }
 
 #textblock-coverer {
-  width: 50%;
-  margin: 0 auto;
-  padding-top: 70px;
-  overflow: hidden;
+
 }
 
 #textblock-title {
@@ -166,58 +92,6 @@
   font-weight: 600;
 }
 
-.neon-button {
-  --glow-color: rgba(199, 171, 225, 0.788);
-  --glow-spread-color: rgba(191, 123, 255, 0.781);
-  --enhanced-glow-color: rgb(231, 206, 255);
-  --btn-color: rgb(100, 61, 136);
-  --btn-color-hovered: rgb(235, 225, 245);
-  border: 0.25em solid var(--glow-color);
-  padding: 1em 3em;
-  color: var(--glow-color);
-  font-size: 15px;
-  font-weight: bold;
-  cursor: pointer;
-  background-color: var(--btn-color);
-  border-radius: 1em;
-  outline: none;
-  box-shadow: 0 0 1em 0.25em var(--glow-color),
-    0 0 4em 1em var(--glow-spread-color),
-    inset 0 0 0.74em 0.25em var(--glow-color);
-  text-shadow: 0 0 0.5em var(--glow-color);
-  position: relative;
-  transition: all 0.3s;
-}
-
-.neon-button::after {
-  pointer-events: none;
-  content: "";
-  position: absolute;
-  top: 120%;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  filter: blur(3px);
-  background-color: var(--glow-spread-color);
-  filter: blur(2em);
-  opacity: 0.7;
-  transform: perspective(1.5em) rotateX(35deg) scale(1, 0.6);
-}
-
-.neon-button:hover {
-  color: var(--btn-color-hovered);
-  background-color: var(--glow-color);
-  box-shadow: 0 0 1em 0.25em var(--glow-color),
-    0 0 4em 2em var(--glow-spread-color),
-    inset 0 0 0.75em 0.25em var(--glow-color);
-}
-
-.neon-button:active {
-  box-shadow: 0 0 0.6em 0.25em var(--glow-color),
-    0 0 2.5em 2em var(--glow-spread-color),
-    inset 0 0 0.5em 0.25em var(--glow-color);
-}
-
 @keyframes colorshift {
   0% {
     color: #000000;
@@ -237,4 +111,122 @@
   100% {
     color: #111111;
   }
+}
+
+@media (min-width: 768px) {
+  /* Neon Button */
+  .neon-button {
+    --glow-color: rgba(199, 171, 225, 0.788);
+    --glow-spread-color: rgba(191, 123, 255, 0.781);
+    --enhanced-glow-color: rgb(231, 206, 255);
+    --btn-color: rgb(100, 61, 136);
+    --btn-color-hovered: rgb(235, 225, 245);
+    border: 0.25em solid var(--glow-color);
+    padding: 1em 3em;
+    color: var(--glow-color);
+    font-size: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: var(--btn-color);
+    border-radius: 1em;
+    outline: none;
+    box-shadow: 0 0 1em 0.25em var(--glow-color),
+      0 0 4em 1em var(--glow-spread-color),
+      inset 0 0 0.74em 0.25em var(--glow-color);
+    text-shadow: 0 0 0.5em var(--glow-color);
+    position: relative;
+    transition: all 0.3s;
+  }
+
+  .neon-button::after {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    top: 120%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    filter: blur(3px);
+    background-color: var(--glow-spread-color);
+    filter: blur(2em);
+    opacity: 0.7;
+    transform: perspective(1.5em) rotateX(35deg) scale(1, 0.6);
+  }
+
+  .neon-button:hover {
+    color: var(--btn-color-hovered);
+    background-color: var(--glow-color);
+    box-shadow: 0 0 1em 0.25em var(--glow-color),
+      0 0 4em 2em var(--glow-spread-color),
+      inset 0 0 0.75em 0.25em var(--glow-color);
+  }
+
+  .neon-button:active {
+    box-shadow: 0 0 0.6em 0.25em var(--glow-color),
+      0 0 2.5em 2em var(--glow-spread-color),
+      inset 0 0 0.5em 0.25em var(--glow-color);
+  }
+
+  /* Parallax Page 1 Content */
+#PurpleBG {
+  background-image: url(./images/PurpleBG.png);
+  background-size: cover;
+}
+
+#TitleTextShadow {
+  text-shadow: 0 0 7px #6a0dad, 0 0 10px #8a2be2, 0 0 21px #7b68ee,
+    0 0 42px #9b59b6, 0 0 82px #a020f0, 0 0 92px #9932cc, 0 0 102px #800080;
+  color: #a608a6;
+  animation: colorshift 20s infinite alternate;
+}
+
+#Cloud {
+  background-image: url(./images/StarPanels.png);
+  background-size: contain;
+}
+
+#Layer1 {
+  background-image: url(./images/Layer1.png);
+  background-size: cover;
+}
+
+#Layer2 {
+  background-image: url(./images/Layer2.png);
+  background-size: contain;
+}
+
+#Layer3 {
+  background-image: url(./images/Layer3.png);
+  background-size: contain;
+}
+
+#Twigs {
+  background-image: url(./images/BlossomLeaves.png);
+  background-size: contain;
+}
+
+#FillerClouds {
+  background-image: url(./images/FillerClouds.png);
+  background-size: cover;
+}
+
+#Character {
+  background-image: url(./images/RaidenCliff.png);
+  background-size: contain;
+}
+
+/* Parallax Page 2 Content */
+#Raiden {
+  background-size: contain;
+  margin: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("./images/RaidenShogun.png");
+}
+
+#DreamSakura {
+  background-image: url(./images/DreamSakura.png);
+  background-size: contain;
+  background-position: center center;
+}
 }

@@ -1,10 +1,10 @@
 export default function TopBar() {
   return (
-    <div className="w-full bg-gray shadow-lg TopBarNav">
-      <nav className="fixed top-0 max-w-full mx-auto px-20px sm:px-10 lg:px-20 pt-5 w-full">
+    <div className="w-full shadow-lg TopBarNav">
+      <nav className="fixed top-0 max-w-full mx-auto sm:px-10 lg:px-20 w-full">
         <div className="flex items-center justify-between h-16 group">
           {/* Logo/Brand Name */}
-          <div className="text-xl font-bold text-white tracking-wider">
+          <div className="font-bold text-white tracking-wider">
           Electro Archon
           </div>
 
@@ -13,7 +13,7 @@ export default function TopBar() {
             <li className="group">
               <a
                 href="#home"
-                className="neon-button rounded-2xl px-3 py-2 text-md text-xl transition duration-150"
+                className="neon-button rounded-2xl px-3 py-2 text-md transition duration-50"
               >
                 Home
               </a>
@@ -21,23 +21,23 @@ export default function TopBar() {
             <li className="group">
               <a
                 href="#about"
-                className="neon-button rounded-2xl px-3 py-2 text-md text-xl transition duration-150"
+                className="neon-button rounded-2xl px-3 py-2 text-md transition duration-50"
               >
-                About
+                Teams
               </a>
             </li>
             <li className="group">
               <a
                 href="#services"
-                className="neon-button rounded-2xl px-3 py-2 text-md text-xl transition duration-150"
+                className="neon-button rounded-2xl px-3 py-2 text-md transition duration-50"
               >
-                Settings?
+                Lore
               </a>
             </li>
             <li className="group">
               <a
                 href="#contact"
-                className="neon-button px-3 py-2 rounded-2xl text-md text-xl transition duration-150"
+                className="neon-button px-3 py-2 rounded-2xl text-md transition duration-50"
               >
                 Contact
               </a>
