@@ -1,5 +1,5 @@
 import "./App.css";
-import ParallaxTop from "./parallax/parallaxTop";
+import ParallaxTop from "./parallax/ParallaxMain";
 import "./template.css"
 
 export default function App() {
