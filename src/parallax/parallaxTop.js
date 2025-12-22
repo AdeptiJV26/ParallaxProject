@@ -3,22 +3,37 @@ import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 export default function ParallaxTop() {
   return (
     <Parallax pages={5} style={{ top: "0", left: "0" }} class="animation">
-      <ParallaxLayer offset={0} speed={0.4} zIndex={200}>
+      <ParallaxLayer
+        offset={0}
+        speed={0.4}
+        zIndex={200}
+        style={{ pointerEvents: "none" }}
+      >
         <div className="animation_layer parallax" id="PurpleBG"></div>
       </ParallaxLayer>
 
-      <ParallaxLayer offset={0} speed={1} zIndex={210}>
+      <ParallaxLayer
+        offset={0}
+        speed={1}
+        zIndex={210}
+        style={{ pointerEvents: "none" }}
+      >
         <div className="animation_layer parallax" id="Moon"></div>
       </ParallaxLayer>
 
-      <ParallaxLayer offset={0} speed={1} zIndex={210}>
+      <ParallaxLayer
+        offset={0}
+        speed={1}
+        zIndex={210}
+        style={{ pointerEvents: "none" }}
+      >
         <div className="animation_layer parallax" id="Cloud"></div>
       </ParallaxLayer>
 
       <ParallaxLayer
         offset={0}
         speed={0.6}
-        style={{ zIndex: "220" }}
+        style={{ zIndex: "220", pointerEvents: "none" }}
         className="w-screen text-center"
       >
         <div className="animation_layer parallax flex">
@@ -60,74 +75,134 @@ export default function ParallaxTop() {
         </div>
       </ParallaxLayer>
 
-      <ParallaxLayer offset={0} speed={0.4} zIndex={230}>
+      <ParallaxLayer
+        offset={0}
+        speed={0.4}
+        zIndex={230}
+        style={{ pointerEvents: "none" }}
+      >
         <div className="animation_layer parallax" id="Layer1"></div>
       </ParallaxLayer>
 
-      <ParallaxLayer offset={0} speed={0.4} zIndex={240}>
+      <ParallaxLayer
+        offset={0}
+        speed={0.4}
+        zIndex={240}
+        style={{ pointerEvents: "none" }}
+      >
         <div className="animation_layer parallax" id="Layer2"></div>
       </ParallaxLayer>
 
-      <ParallaxLayer offset={0} speed={0.5} zIndex={250}>
+      <ParallaxLayer
+        offset={0}
+        speed={0.5}
+        zIndex={250}
+        style={{ pointerEvents: "none" }}
+      >
         <div className="animation_layer parallax" id="Layer3"></div>
       </ParallaxLayer>
 
-      <ParallaxLayer offset={0} speed={0.5} zIndex={250}>
+      <ParallaxLayer
+        offset={0}
+        speed={0.5}
+        zIndex={250}
+        style={{ pointerEvents: "none" }}
+      >
         <div className="animation_layer parallax" id="Twigs"></div>
       </ParallaxLayer>
 
-      <ParallaxLayer offset={0} speed={0.4} zIndex={300}>
+      <ParallaxLayer
+        offset={0}
+        speed={0.4}
+        zIndex={300}
+        style={{ pointerEvents: "none" }}
+      >
         <div className="animation_layer parallax" id="FillerClouds"></div>
       </ParallaxLayer>
 
-      <ParallaxLayer offset={0} speed={0.5} zIndex={400}>
+      <ParallaxLayer
+        offset={0}
+        speed={0.5}
+        zIndex={400}
+        style={{ pointerEvents: "none" }}
+      >
         <div className="animation_layer parallax" id="Character"></div>
       </ParallaxLayer>
       <div class="spacer"></div>
 
-      <ParallaxLayer offset={1.6} speed={0.6} zIndex={110}>
+      <ParallaxLayer
+        offset={1}
+        speed={0.6}
+        zIndex={110}
+        style={{ pointerEvents: "none" }}
+      >
         <div
           className="animation_layer parallax brightness-[0.3]"
           id="DreamSakura"
         ></div>
       </ParallaxLayer>
 
-      <ParallaxLayer offset={1.6} speed={0.3} zIndex={130}>
+      <ParallaxLayer
+        offset={1}
+        speed={0.3}
+        zIndex={130}
+        style={{ pointerEvents: "none" }}
+      >
         <div
           className="animation_layer parallax brightness-[0.3]"
           id="Raiden"
         ></div>
       </ParallaxLayer>
 
-      <ParallaxLayer offset={1.6} speed={0.3} zIndex={130}>
+      <ParallaxLayer
+        offset={1}
+        speed={0.3}
+        zIndex={140}
+        style={{ pointerEvents: "auto" }}
+      >
         <div className="flex flex-col justify-center items-center text-white w-full h-full px-10">
           <p className="text-5xl font-black shadows-into-light-regular mb-10">
             Raiden Builds
           </p>
 
-          <div className="grid grid-cols-3 xl:grid-cols-4 gap-8 w-full max-w-7xl">
-            {[
-              "Hyper Carry",
-              "National",
-              "Hyperbloom",
-              "Overload",
-              5,
-              6,
-              7,
-              8,
-            ].map((item) => (
-              <div
-                key={item}
-                className="bg-black/40 backdrop-blur-[2px] border border-purple-500/30 p6 rounded-lg hover:border-purple-500 transition-colors h-48 flex items-center justify-center"
-              >
-                <span className="text-xl font-bold">Team {item} </span>{" "}
-              </div>
-            ))}
+          <div className="grid grid-cols-3 xl:grid-cols-3 gap-8 w-full max-w-7xl justify-center items-center pointer-events-auto">
+            {["Hyper Carry", "National", "Hyperbloom", "Overload"].map(
+              (item) => (
+                <div
+                  key={item}
+                  className="flex flex-col justify-center items-center gap-4 top-0 bg-black/40 backdrop-blur-[2px] border border-purple-500/30 hover:border-purple-500 hover:border-2 hover:bg p6 rounded-lg aspect-square transition-colors flex items-start justify-center"
+                >
+                  <span className="text-xl pt-2 font-bold">Team {item}</span>
+
+                  <img
+                    src="./images/RaidenProfile.png"
+                    alt="Main Leader"
+                    className="w-24 h-24 rounded-full border-2 border-purple-500 shadow-lg shadow-purple-500/20"
+                  />
+
+                  <div className="flex gap-2">
+                    {[1, 2, 3].map((num) => (
+                      <img
+                        key={num}
+                        src={`./images/member${num}.png`} // Ensure these exist or use RaidenProfile for testing
+                        alt="member"
+                        className="w-10 h-10 rounded-md border border-white/20 hover:border-purple-400 transition-all"
+                      />
+                    ))}
+                  </div>
+                </div>
+              )
+            )}
           </div>
         </div>
       </ParallaxLayer>
 
-      <ParallaxLayer offset={3} speed={0.6} zIndex={300}>
+      <ParallaxLayer
+        offset={3}
+        speed={0.6}
+        zIndex={300}
+        style={{ pointerEvents: "none" }}
+      >
         <div className="animation_layer parallax px-40" id="">
           <div id="textblock w-100 h-100">
             <div id="textblock-container flex justify-center items-center text-center">
@@ -182,10 +257,6 @@ export default function ParallaxTop() {
             </footer>
           </div>
         </div>
-      </ParallaxLayer>
-
-      <ParallaxLayer offset={1} speed={0.4} zIndex={21}>
-        <div className="animation_layer parallax" id=""></div>
       </ParallaxLayer>
     </Parallax>
   );
