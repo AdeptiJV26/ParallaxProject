@@ -49,13 +49,10 @@
   width: 100%;
 }
 
-
-
 /* Text Box Panel */
 #textblock {
   height: 100vh;
 }
-
 
 #textblock-title {
   color: #ffffff;
@@ -165,65 +162,65 @@
   }
 
   /* Parallax Page 1 Content */
-#PurpleBG {
-  background-image: url(./images/PurpleBG.png);
-  background-size: cover;
-}
+  #PurpleBG {
+    background-image: url(./images/PurpleBG.png);
+    background-size: cover;
+  }
 
-#TitleTextShadow {
-  text-shadow: 0 0 7px #6a0dad, 0 0 10px #8a2be2, 0 0 21px #7b68ee,
-    0 0 42px #9b59b6, 0 0 82px #a020f0, 0 0 92px #9932cc, 0 0 102px #800080;
-  color: #a608a6;
-  animation: colorshift 20s infinite alternate;
-}
+  #TitleTextShadow {
+    text-shadow: 0 0 7px #6a0dad, 0 0 10px #8a2be2, 0 0 21px #7b68ee,
+      0 0 42px #9b59b6, 0 0 82px #a020f0, 0 0 92px #9932cc, 0 0 102px #800080;
+    color: #a608a6;
+    animation: colorshift 20s infinite alternate;
+  }
 
-#Cloud {
-  background-image: url(./images/StarPanels.png);
-  background-size: contain;
-}
+  #Cloud {
+    background-image: url(./images/StarPanels.png);
+    background-size: contain;
+  }
 
-#Layer1 {
-  background-image: url(./images/Layer1.png);
-  background-size: cover;
-}
+  #Layer1 {
+    background-image: url(./images/Layer1.png);
+    background-size: cover;
+  }
 
-#Layer2 {
-  background-image: url(./images/Layer2.png);
-  background-size: cover;
-}
+  #Layer2 {
+    background-image: url(./images/Layer2.png);
+    background-size: cover;
+  }
 
-#Layer3 {
-  background-image: url(./images/Layer3.png);
-  background-size: cover;
-}
+  #Layer3 {
+    background-image: url(./images/Layer3.png);
+    background-size: cover;
+  }
 
-#Twigs {
-  background-image: url(./images/BlossomLeaves.png);
-  background-size: contain;
-}
+  #Twigs {
+    background-image: url(./images/BlossomLeaves.png);
+    background-size: contain;
+  }
 
-#FillerClouds {
-  background-image: url(./images/FillerClouds.png);
-  background-size: contain;
-}
+  #FillerClouds {
+    background-image: url(./images/FillerClouds.png);
+    background-size: contain;
+  }
 
-#Character {
-  background-image: url(./images/RaidenCliff.png);
-  background-size: cover;
-}
+  #Character {
+    background-image: url(./images/RaidenCliff.png);
+    background-size: cover;
+  }
 
-/* Parallax Page 2 Content */
-#Raiden {
-  background-size: cover;
-  margin: 0;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url("./images/RaidenShogun.png");
-}
+  /* Parallax Page 2 Content */
+  #Raiden {
+    background-size: contain;
+    margin: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("./images/RaidenShogun.png");
+  }
 
-#DreamSakura {
-  background-image: url(./images/DreamSakura.png);
-  background-size: cover;
-  background-position: center center;
-}
+  #DreamSakura {
+    background-image: url(./images/DreamSakura.png);
+    background-size: contain;
+    background-position: center center;
+  }
 }
