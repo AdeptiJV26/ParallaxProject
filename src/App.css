@@ -189,12 +189,12 @@
 
 #Layer2 {
   background-image: url(./images/Layer2.png);
-  background-size: contain;
+  background-size: cover;
 }
 
 #Layer3 {
   background-image: url(./images/Layer3.png);
-  background-size: contain;
+  background-size: cover;
 }
 
 #Twigs {
@@ -204,17 +204,17 @@
 
 #FillerClouds {
   background-image: url(./images/FillerClouds.png);
-  background-size: cover;
+  background-size: contain;
 }
 
 #Character {
   background-image: url(./images/RaidenCliff.png);
-  background-size: contain;
+  background-size: cover;
 }
 
 /* Parallax Page 2 Content */
 #Raiden {
-  background-size: contain;
+  background-size: cover;
   margin: 0;
   background-position: center;
   background-repeat: no-repeat;
@@ -223,7 +223,7 @@
 
 #DreamSakura {
   background-image: url(./images/DreamSakura.png);
-  background-size: contain;
+  background-size: cover;
   background-position: center center;
 }
 }

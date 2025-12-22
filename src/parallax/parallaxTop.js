@@ -128,7 +128,6 @@ export default function ParallaxTop() {
       >
         <div className="animation_layer parallax" id="Character"></div>
       </ParallaxLayer>
-      <div class="spacer"></div>
 
       <ParallaxLayer
         offset={1}
@@ -160,7 +159,7 @@ export default function ParallaxTop() {
         zIndex={140}
         style={{ pointerEvents: "auto" }}
       >
-        <div className="flex flex-col justify-center items-center text-white w-full h-full px-10">
+        <div className="flex flex-col justify-center items-center text-white w-full h-full">
           <p className="text-5xl font-black shadows-into-light-regular mb-10">
             Raiden Builds
           </p>
@@ -170,7 +169,7 @@ export default function ParallaxTop() {
               (item) => (
                 <div
                   key={item}
-                  className="flex flex-col justify-center items-center gap-4 top-0 bg-black/40 backdrop-blur-[2px] border border-purple-500/30 hover:border-purple-500 hover:border-2 hover:bg p6 rounded-lg aspect-square transition-colors flex items-start justify-center"
+                  className="flex flex-col justify-center items-center gap-4 top-0 bg-black/40 backdrop-blur-[2px] border border-purple-500/30 hover:border-purple-500 hover:border-2 hover:bg rounded-lg aspect-square transition-colors flex items-start justify-center"
                 >
                   <span className="text-xl pt-2 font-bold">Team {item}</span>
 
@@ -196,9 +195,9 @@ export default function ParallaxTop() {
           </div>
         </div>
       </ParallaxLayer>
-
+      <div class="spacer"></div>
       <ParallaxLayer
-        offset={3}
+        offset={2}
         speed={0.6}
         zIndex={300}
         style={{ pointerEvents: "none" }}
