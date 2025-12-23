@@ -5,17 +5,17 @@ export default function TopBar({ parallaxRef }) {
   };
   return (
     <div className="w-full shadow-lg TopBarNav">
-      <nav className="fixed top-0 max-w-full mx-auto sm:px-10 lg:px-20 w-full">
+      <nav className="fixed top-0 max-w-full mx-auto mt-2 sm:px-10 lg:px-20 w-full lg:text-2xl">
         <div className="flex items-center justify-between h-16 group">
           <div className="font-bold text-white tracking-wider">
             Electro Archon
           </div>
 
           <ul className="flex space-x-8 gap-8">
-            <button className="neon-button px-3 py-2 rounded-2xl text-md transition duration-50" onClick={() => scrollToPage(0)}>Home</button>
-            <button className="neon-button px-3 py-2 rounded-2xl text-md transition duration-50" onClick={() => scrollToPage(1)}>Teams</button>
-            <button className="neon-button px-3 py-2 rounded-2xl text-md transition duration-50" onClick={() => scrollToPage(2)}>Lore</button>
-            <button className="neon-button px-3 py-2 rounded-2xl text-md transition duration-50" onClick={() => scrollToPage(3)}>Contact</button>
+            <button className="neon-button px-3 py-2 rounded-3xl text-md lg:text-lg transition duration-50 min-h-[2rem] min-w-[5rem]" onClick={() => scrollToPage(0)}>Home</button>
+            <button className="neon-button px-3 py-2 rounded-3xl text-md lg:text-lg transition duration-50 min-h-[2rem] min-w-[5rem]" onClick={() => scrollToPage(1)}>Teams</button>
+            <button className="neon-button px-3 py-2 rounded-3xl text-md lg:text-lg transition duration-50 min-h-[2rem] min-w-[5rem]" onClick={() => scrollToPage(2)}>Lore</button>
+            <button className="neon-button px-3 py-2 rounded-3xl text-md lg:text-lg transition duration-50 min-h-[2rem] min-w-[5rem]" onClick={() => scrollToPage(3)}>Contact</button>
           </ul>
         </div>
       </nav>
