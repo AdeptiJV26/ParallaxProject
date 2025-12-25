@@ -13,7 +13,7 @@ export default function ParallaxTop() {
       <TopBar parallaxRef={parallaxRef} />
       <Parallax
         ref={parallaxRef}
-        pages={4}
+        pages={7}
         style={{ top: "0", left: "0" }}
         class="animation"
       >
@@ -41,7 +41,7 @@ export default function ParallaxTop() {
           zIndex={210}
           style={{ pointerEvents: "none" }}
         >
-          <div className="animation_layer parallax" id="Cloud"></div>
+          <div className="animation_layer parallax" id="ElectroCloud"></div>
         </ParallaxLayer>
 
         <ParallaxLayer
@@ -106,9 +106,10 @@ export default function ParallaxTop() {
         >
           <div className="animation_layer parallax" id="Character"></div>
         </ParallaxLayer>
+        <div className="space"></div>
 
         <ParallaxLayer
-          offset={1}
+          offset={1.4}
           speed={0.6}
           zIndex={110}
           style={{ pointerEvents: "none" }}
@@ -120,8 +121,8 @@ export default function ParallaxTop() {
         </ParallaxLayer>
 
         <ParallaxLayer
-          offset={1}
-          speed={0.3}
+          offset={1.4}
+          speed={0.9}
           zIndex={130}
           style={{ pointerEvents: "none" }}
         >
@@ -132,7 +133,7 @@ export default function ParallaxTop() {
         </ParallaxLayer>
 
         <ParallaxLayer
-          offset={1}
+          offset={1.4}
           speed={0.6}
           zIndex={140}
           style={{ pointerEvents: "auto" }}
@@ -141,7 +142,7 @@ export default function ParallaxTop() {
         </ParallaxLayer>
 
         <ParallaxLayer
-          offset={2}
+          offset={2.2}
           speed={0.6}
           zIndex={300}
           style={{ pointerEvents: "none" }}
@@ -150,7 +151,7 @@ export default function ParallaxTop() {
         </ParallaxLayer>
 
         <ParallaxLayer
-          offset={3}
+          offset={5}
           speed={0.6}
           zIndex={140}
           style={{ pointerEvents: "auto" }}

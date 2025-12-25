@@ -5,7 +5,7 @@ export default function TopBar({ parallaxRef }) {
   };
   return (
     <div className="w-full shadow-lg TopBarNav">
-      <nav className="fixed top-0 max-w-full mx-auto mt-2 sm:px-10 lg:px-20 w-full lg:text-2xl">
+      <nav className="fixed top-0 max-w-full mx-auto mb-2 sm:px-10 md:px-15 lg:px-20 w-full md:text-lg lg:text-2xl">
         <div className="flex items-center justify-between h-16 group">
           <div className="font-bold text-white tracking-wider">
             Electro Archon
