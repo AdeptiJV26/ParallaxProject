@@ -24,30 +24,32 @@ export default function ArtifactLores() {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center w-full h-screen py-5">
-      <span className="text-5xl text-purple-500 shadows-into-light-regular mb-10">
-        Emblem of Severed Fate
-      </span>
+    <div className="bg-zinc-900/30 w-full h-full">
+      <div className="flex flex-col justify-center items-center w-full h-screen py-5">
+        <span className="text-5xl text-purple-500 shadows-into-light-regular mb-10">
+          Emblem of Severed Fate
+        </span>
 
-      <div className="flex flex-row gap-6">
-        {Artifacts.map((item, index) => (
-          <div
-            key={index}
-            className="group w-48 h-64 bg-zinc-800/80 rounded-lg border-2 border-purple-500/30 hover:scale-110 transition-all shadow-2xl flex flex-col items-center justify-center p-4 relative overflow-hidden"
-          >
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-purple-500/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+        <div className="flex flex-row gap-6">
+          {Artifacts.map((item, index) => (
+            <div
+              key={index}
+              className="group w-48 h-64 bg-zinc-800/80 rounded-lg border-2 border-purple-500/30 hover:scale-110 transition-all shadow-2xl flex flex-col items-center justify-center p-4 relative overflow-hidden"
+            >
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-purple-500/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-            <img
-              src={getImageUrl(item.img)}
-              alt={item.name}
-              className="w-32 h-32 object-contain relative z-10 transition-all duration-300 group-hover:drop-shadow-[0_0_15px_rgba(168,85,247,0.8)]"
-            />
+              <img
+                src={getImageUrl(item.img)}
+                alt={item.name}
+                className="w-32 h-32 object-contain relative z-10 transition-all duration-300 group-hover:drop-shadow-[0_0_15px_rgba(168,85,247,0.8)]"
+              />
 
-            <span className="text-white font-bold mt-4 uppercase text-xs tracking-widest relative z-10 group-hover:text-purple-300 transition-colors">
-              {item.name}
-            </span>
-          </div>
-        ))}
+              <span className="text-white font-bold mt-4 uppercase text-xs tracking-widest relative z-10 group-hover:text-purple-300 transition-colors">
+                {item.name}
+              </span>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

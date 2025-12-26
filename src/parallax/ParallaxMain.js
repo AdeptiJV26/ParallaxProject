@@ -142,7 +142,7 @@ export default function ParallaxTop() {
         </ParallaxLayer>
 
         <ParallaxLayer
-          offset={2.2}
+          offset={3}
           speed={0.6}
           zIndex={300}
           style={{ pointerEvents: "none" }}
@@ -151,7 +151,7 @@ export default function ParallaxTop() {
         </ParallaxLayer>
 
         <ParallaxLayer
-          offset={5}
+          offset={4}
           speed={0.6}
           zIndex={140}
           style={{ pointerEvents: "auto" }}

@@ -3,7 +3,6 @@ import { ParallaxLayer } from "@react-spring/parallax";
 
 export default function ParallaxLore() {
   return (
-    <div id="StormWrapper">
       <div
         className="animation_layer parallax px-40 flex justify-center py-1 items-center"
         id="Storm"
@@ -60,6 +59,5 @@ export default function ParallaxLore() {
           </footer>
         </div>
       </div>
-    </div>
   );
 }

@@ -13,12 +13,6 @@
   font-style: normal;
 }
 
-/* Navigation Bar */
-
-.TopBarNav {
-  /* background-color: linear-gradient (to bottom, rgba(255, 255, 255, 0), rgba(147, 51, 234, 1)) ; */
-}
-
 /* Main */
 .appBG {
   background-color: #000;
@@ -29,8 +23,7 @@
 
 .animation,
 .animation_layer {
-  height: 100%;
-  min-height: 100vh;
+  height: 1000px;
 }
 
 .animation {
@@ -157,7 +150,10 @@
   #PurpleBG {
     background-image: url(./images/PurpleBG.png);
     background-size: cover;
-    bottom: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
   }
 
   #TitleTextShadow {
@@ -169,46 +165,73 @@
 
   #ElectroCloud {
     background-image: url(./images/StarPanels.png);
-    background-size: contain;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
   }
 
   #Layer1 {
     background-image: url(./images/Layer1.png);
     background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
   }
 
   #Layer2 {
     background-image: url(./images/Layer2.png);
     background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
   }
 
   #Layer3 {
     background-image: url(./images/Layer3.png);
-    background-size: contain;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
   }
 
   #Twigs {
     background-image: url(./images/BlossomLeaves.png);
-    background-size: contain;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
   }
 
   #FillerClouds {
     background-image: url(./images/FillerClouds.png);
-    background-size: contain;
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
   }
 
   #Character {
     background-image: url(./images/RaidenCliff.png);
-    background-size: contain;
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
   }
 
   /* Parallax Page 2 Content */
   #Raiden {
     background-size: contain;
-    margin: 0;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url("./images/RaidenShogun.png");
+    background-image: url(./images/RaidenShogun.png);
   }
 
   #DreamSakura {
@@ -218,25 +241,17 @@
   }
 
   /* Parallax Page 3 Content */
-  #StormWrapper {
-    transform: none !important;
-  }
-
   #Storm {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
       linear-gradient(
         to bottom,
         rgba(0, 0, 0, 1) 0%,
-        rgba(0, 0, 0, 0.6) 20%,
-        rgba(0, 0, 0, 0) 40%,
-        rgba(0, 0, 0, 0) 60%,
-        rgba(0, 0, 0, 0.8) 80%,
-        rgba(0, 0, 0, 1) 105%
+        rgba(0, 0, 0, 0) 30%,
+        rgba(0, 0, 0, 0) 70%,
+        rgba(0, 0, 0, 1) 100%
       ),
       url(./images/InazumaStorm.gif);
-    min-height: calc(100vh + 10px);
     background-size: cover;
     background-position: center center;
-    background-repeat: no-repeat;
   }
 }
