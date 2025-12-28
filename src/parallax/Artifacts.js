@@ -9,32 +9,27 @@ const Artifacts = [
 ];
 
 export default function ArtifactLores() {
-  // Helper function to handle image resolution
   const getImageUrl = (imgName) => {
     try {
-      // Adjusted path assuming images are in src/images/ relative to this file
-      return (
-        require(`../images/${imgName}`).default ||
-        require(`../images/${imgName}`)
-      );
+      return require(`../images/${imgName}`).default || require(`../images/${imgName}`);
     } catch (err) {
       console.error("Image not found:", imgName);
-      return ""; // Fallback to empty or a placeholder
+      return "";
     }
   };
 
   return (
-    <div className="bg-zinc-900/30 w-full h-full">
-      <div className="flex flex-col justify-center items-center w-full h-screen py-5">
+    <div className="min-h-screen"> 
+      <div className="max-w-[1400px] mx-auto px-6 py-5 flex flex-col justify-center items-center h-screen">
         <span className="text-5xl text-purple-500 shadows-into-light-regular mb-10">
           Emblem of Severed Fate
         </span>
 
         <div className="flex flex-row gap-6">
-          {Artifacts.map((item, index) => (
+          {Artifacts.map((item) => (
             <div
-              key={index}
-              className="group w-48 h-64 bg-zinc-800/80 rounded-lg border-2 border-purple-500/30 hover:scale-110 transition-all shadow-2xl flex flex-col items-center justify-center p-4 relative overflow-hidden"
+              key={item.id}
+              className="group w-72 h-96 bg-zinc-800/80 rounded-lg hover:border-4 border-purple-600/30 hover:scale-110 transition-all shadow-2xl flex flex-col items-center justify-center p-4 relative overflow-hidden"
             >
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-purple-500/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 

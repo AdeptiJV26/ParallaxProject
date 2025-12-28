@@ -5,11 +5,7 @@ export default function TeamBuilds() {
       hoverColor: "hover:bg-dark-900/50",
       leader: "RaidenProfile.png",
       member: [
-        {
-          img: "KujouSaraProfile.png",
-          elementalType: "Electro",
-          name: "Kujou Sara",
-        },
+        { img: "KujouSaraProfile.png", elementalType: "Electro", name: "Kujou Sara" },
         { img: "BennettProfile.png", elementalType: "Pyro", name: "Bennett" },
         { img: "KazuhaProfile.png", elementalType: "Anemo", name: "Kazuha" },
       ],
@@ -19,13 +15,9 @@ export default function TeamBuilds() {
       hoverColor: "hover:bg-dark-900/50",
       leader: "RaidenProfile.png",
       member: [
-        {
-          img: "XianglingProfile.png",
-          elementalType: "Pyro",
-          name: "Xiangling",
-        },
-        { img: "XingqiuProfile.png", elementalType: "Hydro", name: "Xingqui" },
-        { img: "BennettProfile.png", elementalType: "Pyro", name: "Bennet" },
+        { img: "XianglingProfile.png", elementalType: "Pyro", name: "Xiangling" },
+        { img: "XingqiuProfile.png", elementalType: "Hydro", name: "Xingqiu" },
+        { img: "BennettProfile.png", elementalType: "Pyro", name: "Bennett" },
       ],
     },
     {
@@ -43,17 +35,9 @@ export default function TeamBuilds() {
       hoverColor: "hover:bg-dark-900/50",
       leader: "RaidenProfile.png",
       member: [
-        {
-          img: "ChevreuseProfile.png",
-          elementalType: "Pyro",
-          name: "Chevreuse",
-        },
-        { img: "BennettProfile.png", elementalType: "Pyro", name: "Bennet" },
-        {
-          img: "XianglingProfile.png",
-          elementalType: "Pyro",
-          name: "Xiangling",
-        },
+        { img: "ChevreuseProfile.png", elementalType: "Pyro", name: "Chevreuse" },
+        { img: "BennettProfile.png", elementalType: "Pyro", name: "Bennett" },
+        { img: "XianglingProfile.png", elementalType: "Pyro", name: "Xiangling" },
       ],
     },
   ];
@@ -72,6 +56,18 @@ export default function TeamBuilds() {
     Anemo: "group-hover:border-teal-500 group-hover:bg-teal-900/80",
     Hydro: "group-hover:border-blue-500 group-hover:bg-blue-900/80",
     Dendro: "group-hover:border-green-500 group-hover:bg-green-900/80",
+  };
+
+  const characterRole = {
+    "Kujou Sara": "ATK Buffer / Crit DMG",
+    "Bennett": "Healer / Massive ATK Buff",
+    "Kazuha": "Elemental DMG Buffer / Shred",
+    "Xiangling": "Off-field DPS / Pyro Application / Snapshot",
+    "Xingqiu": "Hydro App / DMG Reduction",
+    "Nahida": "Dendro App / EM Buffer",
+    "Yelan": "Off-field DPS / DMG Ramp",
+    "Baizhu": "Shield / Healer / Bloom Buff",
+    "Chevreuse": "Overload Shred / ATK Buffer",
   };
 
   const getImg = (path) => {
@@ -95,40 +91,88 @@ export default function TeamBuilds() {
             className={`flex flex-col justify-center items-center hover:scale-105 gap-4 bg-black/40 hover:border-2 backdrop-blur-[2px] border border-purple-500/30 p-6 rounded-lg aspect-square w-[calc(33.33%-2rem)] min-w-[300px] transition-all duration-300 ${team.hoverColor}`}
           >
             <span className="text-xl font-bold">Team {team.name}</span>
-            <div className="border-b-4 pb-2 border-white-500">
+            <div className="border-b-4 pb-2 border-white/50">
               <img
                 src={getImg(team.leader)}
                 alt={`${team.name} leader`}
-                className="w-40 h-40 rounded-xl border-2 border-purple-500 shadow-lg shadow-purple-500/20 v"
+                className="w-40 h-40 rounded-xl border-2 border-purple-500 shadow-lg shadow-purple-500/20"
               />
             </div>
-            <div className="flex gap-4">
+
+            <div className="flex gap-6">
               {team.member?.map((char, idx) => (
                 <div
                   key={idx}
                   className="group relative flex flex-col items-center"
                 >
+                  {/* Elemental Type Tooltip (top) */}
                   <span className="absolute -top-10 scale-0 group-hover:scale-100 transition-all duration-200 text-xs font-bold bg-black/90 text-white px-2 py-1 rounded border border-purple-500 z-50 pointer-events-none whitespace-nowrap">
                     {char.elementalType}
                   </span>
 
+                  {/* Character Image */}
                   <img
                     src={getImg(char.img)}
-                    alt="member"
+                    alt={char.name}
                     className={`w-16 h-16 rounded-md border border-white/20 group-hover:scale-110 transition-all duration-200 ${
-                      profileContainer[char.elementalType] ||
-                      "group-hover:border-purple-400"
+                      profileContainer[char.elementalType] || "group-hover:border-purple-400"
                     }`}
                   />
 
-                  <span
-                    className={`absolute -bottom-10 scale-0 group-hover:scale-100 transition-all duration-200 text-xs font-bold px-2 py-1 rounded border z-50 pointer-events-none whitespace-nowrap ${
-                      textPanel[char.elementalType] ||
-                      "text-white border-white bg-black/90"
-                    }`}
-                  >
-                    {char.name}
-                  </span>
+                  {/* Name + Arrow Tooltip Container */}
+                  <div className="absolute -bottom-14 flex flex-col items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-50 pointer-events-none">
+                    <div className="pointer-events-auto flex flex-col items-center">
+                      {/* Name Box */}
+                      <div
+                        className={`text-xs font-bold px-3 py-1 rounded-t border-l border-r border-t whitespace-nowrap ${
+                          textPanel[char.elementalType] || "text-white border-white bg-black/90"
+                        }`}
+                      >
+                        {char.name}
+                      </div>
+
+                      <div className="group/arrow relative">
+                        {/* Arrow Down */}
+                        <div
+                          className={`p-1.5 cursor-pointer border-l border-r border-b ${
+                            textPanel[char.elementalType]?.split(" ").find((c) => c.startsWith("bg-")) || "bg-black/90"
+                          } ${
+                            textPanel[char.elementalType]?.split(" ").find((c) => c.startsWith("border-")) || "border-white"
+                          }`}
+                          style={{
+                            clipPath: "polygon(0% 0%, 100% 0%, 50% 100%)",
+                          }}
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            strokeWidth="2.5"
+                            stroke="white"
+                            className="w-4 h-4"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5"
+                            />
+                          </svg>
+                        </div>
+
+                        {/* Arrow Down Result */}
+                        <div
+                          className="absolute left-1/2 -translate-x-1/2 top-full mt-1.5 scale-0 group-hover/arrow:scale-100 opacity-0 group-hover/arrow:opacity-100 transition-all duration-200 text-md font-bold bg-black/95 text-white px-3 py-1.5 rounded border whitespace-nowrap z-50 pointer-events-none"
+                          style={{
+                            borderColor:
+                              textPanel[char.elementalType]?.match(/border-([a-z-]+)-500/)?.[1] ||
+                              "white",
+                          }}
+                        >
+                          {characterRole[char.name] || "Support"}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
