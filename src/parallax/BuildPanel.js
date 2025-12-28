@@ -62,7 +62,7 @@ export default function TeamBuilds() {
     "Kujou Sara": "ATK Buffer / Crit DMG",
     "Bennett": "Healer / Massive ATK Buff",
     "Kazuha": "Elemental DMG Buffer / Shred",
-    "Xiangling": "Off-field DPS / Pyro Application / Snapshot",
+    "Xiangling": "Off-field DPS / Pyronado",
     "Xingqiu": "Hydro App / DMG Reduction",
     "Nahida": "Dendro App / EM Buffer",
     "Yelan": "Off-field DPS / DMG Ramp",
@@ -131,8 +131,9 @@ export default function TeamBuilds() {
                         {char.name}
                       </div>
 
+                      {/* Arrow + Role Group */}
                       <div className="group/arrow relative">
-                        {/* Arrow Down */}
+                        {/* Arrow (white SVG, compact) */}
                         <div
                           className={`p-1.5 cursor-pointer border-l border-r border-b ${
                             textPanel[char.elementalType]?.split(" ").find((c) => c.startsWith("bg-")) || "bg-black/90"
@@ -159,9 +160,9 @@ export default function TeamBuilds() {
                           </svg>
                         </div>
 
-                        {/* Arrow Down Result */}
+                        {/* Role Tooltip */}
                         <div
-                          className="absolute left-1/2 -translate-x-1/2 top-full mt-1.5 scale-0 group-hover/arrow:scale-100 opacity-0 group-hover/arrow:opacity-100 transition-all duration-200 text-md font-bold bg-black/95 text-white px-3 py-1.5 rounded border whitespace-nowrap z-50 pointer-events-none"
+                          className="absolute left-1/2 -translate-x-1/2 top-full mt-1.5 scale-0 group-hover/arrow:scale-100 opacity-0 group-hover/arrow:opacity-100 transition-all duration-200 text-xs font-bold bg-black/95 text-white px-3 py-1.5 rounded border whitespace-nowrap z-50 pointer-events-none"
                           style={{
                             borderColor:
                               textPanel[char.elementalType]?.match(/border-([a-z-]+)-500/)?.[1] ||
