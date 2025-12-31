@@ -98,7 +98,6 @@
 #Layer1 { background-image: url(./images/Layer1.png); }
 #Layer2 { background-image: url(./images/Layer2.png); }
 #Layer3 { background-image: url(./images/Layer3.png); }
-#Twigs { background-image: url(./images/BlossomLeaves.png); }
 #FillerClouds { background-image: url(./images/FillerClouds.png); }
 #Character { background-image: url(./images/RaidenCliff.png); }
 #Raiden { background-image: url(./images/RaidenShogun.png); background-size: contain; background-position: center; }
@@ -166,7 +165,7 @@
     background-position: center bottom;
   }
   #Layer3 {
-    background-size: cover;
+    background-size: contain;
     background-position: center top;
   }
 }

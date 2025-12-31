@@ -26,14 +26,6 @@ export default function ParallaxTop() {
           <div className="animation_layer parallax" id="PurpleBG"></div>
         </ParallaxLayer>
 
-        <ParallaxLayer
-          offset={0}
-          speed={1}
-          zIndex={210}
-          style={{ pointerEvents: "none" }}
-        >
-          <div className="animation_layer parallax" id="Moon"></div>
-        </ParallaxLayer>
 
         <ParallaxLayer
           offset={0}
@@ -55,7 +47,7 @@ export default function ParallaxTop() {
 
         <ParallaxLayer
           offset={0}
-          speed={0.4}
+          speed={0.7}
           zIndex={230}
           style={{ pointerEvents: "none" }}
         >
@@ -64,7 +56,7 @@ export default function ParallaxTop() {
 
         <ParallaxLayer
           offset={0}
-          speed={0.4}
+          speed={0.6}
           zIndex={240}
           style={{ pointerEvents: "none" }}
         >
@@ -73,21 +65,14 @@ export default function ParallaxTop() {
 
         <ParallaxLayer
           offset={0}
-          speed={0.5}
+          speed={0.6}
           zIndex={250}
           style={{ pointerEvents: "none" }}
         >
           <div className="animation_layer parallax" id="Layer3"></div>
         </ParallaxLayer>
 
-        <ParallaxLayer
-          offset={0}
-          speed={0.5}
-          zIndex={250}
-          style={{ pointerEvents: "none" }}
-        >
-          <div className="animation_layer parallax" id="Twigs"></div>
-        </ParallaxLayer>
+      
 
         <ParallaxLayer
           offset={0}

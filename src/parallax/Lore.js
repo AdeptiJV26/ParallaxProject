@@ -1,5 +1,4 @@
 import React from "react";
-import { ParallaxLayer } from "@react-spring/parallax";
 
 export default function ParallaxLore() {
   return (
