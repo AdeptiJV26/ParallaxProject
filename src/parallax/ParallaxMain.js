@@ -109,7 +109,7 @@ export default function ParallaxTop() {
         <div className="space"></div>
 
         <ParallaxLayer
-          offset={1.4}
+          offset={1}
           speed={0.6}
           zIndex={110}
           style={{ pointerEvents: "none" }}
@@ -121,7 +121,7 @@ export default function ParallaxTop() {
         </ParallaxLayer>
 
         <ParallaxLayer
-          offset={1.4}
+          offset={1}
           speed={0.9}
           zIndex={130}
           style={{ pointerEvents: "none" }}
@@ -133,7 +133,7 @@ export default function ParallaxTop() {
         </ParallaxLayer>
 
         <ParallaxLayer
-          offset={1.4}
+          offset={1}
           speed={0.6}
           zIndex={140}
           style={{ pointerEvents: "auto" }}
@@ -142,7 +142,7 @@ export default function ParallaxTop() {
         </ParallaxLayer>
 
         <ParallaxLayer
-          offset={3}
+          offset={2.2}
           speed={0.6}
           zIndex={300}
           style={{ pointerEvents: "none" }}
@@ -151,7 +151,7 @@ export default function ParallaxTop() {
         </ParallaxLayer>
 
         <ParallaxLayer
-          offset={4}
+          offset={3.2}
           speed={0.6}
           zIndex={140}
           style={{ pointerEvents: "auto" }}

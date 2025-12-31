@@ -88,14 +88,14 @@ export default function TeamBuilds() {
         {buildData.map((team) => (
           <div
             key={team.name}
-            className={`flex flex-col justify-center items-center hover:scale-105 gap-4 bg-black/40 hover:border-2 backdrop-blur-[2px] border border-purple-500/30 p-6 rounded-lg aspect-square w-[calc(33.33%-2rem)] min-w-[300px] transition-all duration-300 ${team.hoverColor}`}
+            className={`flex flex-col justify-center items-center hover:scale-105 gap-4 bg-black/40 hover:border-2 backdrop-blur-[2px] border border-purple-500/30 p-4 rounded-lg aspect-square w-[calc(25%-2rem)] min-w-[260px] transition-all duration-300 ${team.hoverColor}`}
           >
             <span className="text-xl font-bold">Team {team.name}</span>
             <div className="border-b-4 pb-2 border-white/50">
               <img
-                src={getImg(team.leader)}
+                src={getImg(team.leader)} 
                 alt={`${team.name} leader`}
-                className="w-40 h-40 rounded-xl border-2 border-purple-500 shadow-lg shadow-purple-500/20"
+                className=" sm:w-12  sm:h-12 md:w-24 md:h-24 lg:w-36 lg:h-36 rounded-xl border-2 border-purple-500 shadow-lg shadow-purple-500/20"
               />
             </div>
 

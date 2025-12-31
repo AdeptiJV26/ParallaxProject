@@ -1,19 +1,20 @@
-/* Tailwind */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Google Font */
 @import url("https://fonts.googleapis.com/css2?family=New+Rocker&family=Shadows+Into+Light&display=swap");
 
-/* Fonts */
-.shadows-into-light-regular {
-  font-family: "Shadows Into Light", cursive;
-  font-weight: 400;
-  font-style: normal;
+:root {
+  --glow-color: rgba(199, 171, 225, 0.788);
+  --glow-spread-color: rgba(191, 123, 255, 0.781);
+  --enhanced-glow-color: rgb(231, 206, 255);
+  --btn-color: rgb(100, 61, 136);
+  --btn-color-hovered: rgb(235, 225, 245);
 }
 
-/* Main */
+/* Typography & Layout */
+.shadows-into-light-regular { font-family: "Shadows Into Light", cursive; }
+
 .appBG {
   background-color: #000;
   height: 100vh;
@@ -21,16 +22,8 @@
   overflow-y: hidden;
 }
 
-.animation,
-.animation_layer {
-  height: 1000px;
-}
-
-.animation {
-  display: block;
-  position: relative;
-  z-index: 10;
-}
+.animation, .animation_layer { height: 1000px; }
+.animation { display: block; position: relative; z-index: 10; }
 
 .animation_layer {
   background-position: bottom center;
@@ -49,209 +42,156 @@
   width: 100%;
 }
 
-/* Text Box Panel */
-#textblock {
-  height: 100vh;
-}
-
-#textblock-title {
-  color: #ffffff;
-  font-size: 35px;
-  font-weight: 600;
-  font-family: "Helvetica Neue";
-}
-
-#textblock-content {
-  color: #ffffff;
-  font-size: 20px;
-}
-
+/* Text Blocks */
+#textblock { height: 100vh; }
+#textblock-title { color: #fff; font-size: 35px; font-weight: 600; font-family: "Helvetica Neue"; }
+#textblock-content { color: #fff; font-size: 20px; }
+#textblock-text { text-decoration: none; color: #fff; font-size: 15px; font-weight: 600; }
 #textblock-footer {
-  color: #ffffff;
+  color: #fff;
   font-size: 15px;
-  font-weight: 400;
   position: fixed;
   width: 100%;
-  bottom: 0px;
-  justify-content: center;
-  align-items: center;
+  bottom: 0;
   text-align: center;
   margin-bottom: 20px;
 }
 
-#textblock-text {
-  text-decoration: none;
-  color: #ffffff;
-  font-size: 15px;
-  font-weight: 600;
+/* Neon Button Base */
+.neon-button {
+  color: var(--glow-color);
+  font-weight: bold;
+  cursor: pointer;
+  background-color: var(--btn-color);
+  outline: none;
+  text-shadow: 0 0 0.5em var(--glow-color);
+  position: relative;
+  transition: all 0.3s;
+}
+
+.neon-button:hover {
+  color: var(--btn-color-hovered);
+  background-color: var(--glow-color);
+  box-shadow: 0 0 1em 0.25em var(--glow-color), 0 0 4em 2em var(--glow-spread-color), inset 0 0 0.75em 0.25em var(--glow-color);
+}
+
+.neon-button:active {
+  box-shadow: 0 0 0.6em 0.25em var(--glow-color), 0 0 2.5em 2em var(--glow-spread-color), inset 0 0 0.5em 0.25em var(--glow-color);
+}
+
+/* Parallax Content & Backgrounds */
+#PurpleBG, #ElectroCloud, #Layer1, #Layer2, #Layer3, #Twigs, #FillerClouds, #Character, #Storm {
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+}
+
+#TitleTextShadow {
+  text-shadow: 0 0 7px #6a0dad, 0 0 10px #8a2be2, 0 0 21px #7b68ee, 0 0 42px #9b59b6, 0 0 82px #a020f0, 0 0 92px #9932cc, 0 0 102px #800080;
+  color: #a608a6;
+  animation: colorshift 20s infinite alternate;
+}
+
+/* Background Image Mapping */
+#PurpleBG { background-image: url(./images/PurpleBG.png); }
+#ElectroCloud { background-image: url(./images/StarPanels.png); }
+#Layer1 { background-image: url(./images/Layer1.png); }
+#Layer2 { background-image: url(./images/Layer2.png); }
+#Layer3 { background-image: url(./images/Layer3.png); }
+#Twigs { background-image: url(./images/BlossomLeaves.png); }
+#FillerClouds { background-image: url(./images/FillerClouds.png); }
+#Character { background-image: url(./images/RaidenCliff.png); }
+#Raiden { background-image: url(./images/RaidenShogun.png); background-size: contain; background-position: center; }
+#DreamSakura { background-image: url(./images/DreamSakura.png); background-size: contain; background-position: center; }
+#Storm {
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), linear-gradient(to bottom, #000 0%, transparent 30%, transparent 70%, #000 100%), url(./images/InazumaStorm.gif);
+  background-size: cover;
+  background-position: center;
+}
+
+/* Responsive Logic - Strictly Isolated */
+@media (min-width: 769px) {
+  .neon-button {
+    border: 0.25em solid var(--glow-color);
+    padding: 1em 3em;
+    border-radius: 1em;
+    box-shadow: 0 0 1em 0.25em var(--glow-color), 0 0 4em 1em var(--glow-spread-color), inset 0 0 0.74em 0.25em var(--glow-color);
+  }
+  #PurpleBG, #ElectroCloud, #Twigs { background-size: cover; background-position: center; }
+  #Layer1, #Layer2, #FillerClouds, #Character { background-size: cover; background-position: center bottom; }
+  #Layer3 { background-size: cover; background-position: center top; }
+}
+
+@media (max-width: 768px) {
+  .neon-button {
+    border: 0.1em solid var(--glow-color);
+    padding: 0.2em 0.2em;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 1em 0.25em var(--glow-color), 0 0 4em 1em var(--glow-spread-color), inset 0 0 0.74em 0.25em var(--glow-color);
+  }
+  #PurpleBG, #ElectroCloud, #Layer1, #Layer2, #Layer3, #Twigs, #FillerClouds, #Character {
+    background-size: contain;
+    background-position: top;
+  }
 }
 
 @keyframes colorshift {
-  0% {
-    color: #000000;
-  }
-  20% {
-    color: #0a0a0a;
-  }
-  40% {
-    color: #050505;
-  }
-  60% {
-    color: #0d0d0d;
-  }
-  80% {
-    color: #101010;
-  }
-  100% {
-    color: #111111;
-  }
+  0% { color: #000; }
+  100% { color: #111; }
 }
 
-@media (min-width: 768px) {
-  /* Neon Button */
+/* Desktop Styles (min-width: 769px) */
+@media (min-width: 769px) {
   .neon-button {
-    --glow-color: rgba(199, 171, 225, 0.788);
-    --glow-spread-color: rgba(191, 123, 255, 0.781);
-    --enhanced-glow-color: rgb(231, 206, 255);
-    --btn-color: rgb(100, 61, 136);
-    --btn-color-hovered: rgb(235, 225, 245);
     border: 0.25em solid var(--glow-color);
     padding: 1em 3em;
-    color: var(--glow-color);
-    font-size: 10px;
-    font-weight: bold;
-    cursor: pointer;
-    background-color: var(--btn-color);
     border-radius: 1em;
-    outline: none;
     box-shadow: 0 0 1em 0.25em var(--glow-color),
       0 0 4em 1em var(--glow-spread-color),
       inset 0 0 0.74em 0.25em var(--glow-color);
-    text-shadow: 0 0 0.5em var(--glow-color);
-    position: relative;
-    transition: all 0.3s;
   }
 
-  .neon-button:hover {
-    color: var(--btn-color-hovered);
-    background-color: var(--glow-color);
-    box-shadow: 0 0 1em 0.25em var(--glow-color),
-      0 0 4em 2em var(--glow-spread-color),
-      inset 0 0 0.75em 0.25em var(--glow-color);
-  }
-
-  .neon-button:active {
-    box-shadow: 0 0 0.6em 0.25em var(--glow-color),
-      0 0 2.5em 2em var(--glow-spread-color),
-      inset 0 0 0.5em 0.25em var(--glow-color);
-  }
-
-  /* Parallax Page 1 Content */
-  #PurpleBG {
-    background-image: url(./images/PurpleBG.png);
+  /* Desktop Background Sizing */
+  #PurpleBG,
+  #ElectroCloud,
+  #Twigs {
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: 100%;
   }
-
-  #TitleTextShadow {
-    text-shadow: 0 0 7px #6a0dad, 0 0 10px #8a2be2, 0 0 21px #7b68ee,
-      0 0 42px #9b59b6, 0 0 82px #a020f0, 0 0 92px #9932cc, 0 0 102px #800080;
-    color: #a608a6;
-    animation: colorshift 20s infinite alternate;
-  }
-
-  #ElectroCloud {
-    background-image: url(./images/StarPanels.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: 100%;
-  }
-
-  #Layer1 {
-    background-image: url(./images/Layer1.png);
+  #Layer1,
+  #Layer2,
+  #FillerClouds,
+  #Character {
     background-size: cover;
     background-position: center bottom;
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: 100%;
   }
-
-  #Layer2 {
-    background-image: url(./images/Layer2.png);
-    background-size: cover;
-    background-position: center bottom;
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: 100%;
-  }
-
   #Layer3 {
-    background-image: url(./images/Layer3.png);
     background-size: cover;
     background-position: center top;
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: 100%;
+  }
+}
+
+/* Mobile Styles (max-width: 768px) */
+@media (max-width: 768px) {
+  .neon-button {
+    border: 0.1em solid var(--glow-color);
+    padding: 0.2em 0.2em;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 1em 0.25em var(--glow-color),
+      0 0 4em 1em var(--glow-spread-color),
+      inset 0 0 0.74em 0.25em var(--glow-color);
   }
 
-  #Twigs {
-    background-image: url(./images/BlossomLeaves.png);
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: 100%;
-  }
-
-  #FillerClouds {
-    background-image: url(./images/FillerClouds.png);
-    background-size: cover;
-    background-position: center bottom;
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: 100%;
-  }
-
+  /* Mobile Background Sizing - Force contain/top to match your visuals */
+  #PurpleBG,
+  #ElectroCloud,
+  #Layer1,
+  #Layer2,
+  #Layer3,
+  #Twigs,
+  #FillerClouds,
   #Character {
-    background-image: url(./images/RaidenCliff.png);
-    background-size: cover;
-    background-position: center bottom;
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: 100%;
-  }
-
-  /* Parallax Page 2 Content */
-  #Raiden {
     background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url(./images/RaidenShogun.png);
-  }
-
-  #DreamSakura {
-    background-image: url(./images/DreamSakura.png);
-    background-size: contain;
-    background-position: center center;
-  }
-
-  /* Parallax Page 3 Content */
-  #Storm {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 1) 0%,
-        rgba(0, 0, 0, 0) 30%,
-        rgba(0, 0, 0, 0) 70%,
-        rgba(0, 0, 0, 1) 100%
-      ),
-      url(./images/InazumaStorm.gif);
-    background-size: cover;
-    background-position: center center;
+    background-position: top;
   }
 }
